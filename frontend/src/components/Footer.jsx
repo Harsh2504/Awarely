@@ -1,12 +1,9 @@
-
 import { Container, Row, Col, Nav, Image } from 'react-bootstrap';
-// import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white py-5">
+    <footer className="bg-dark text-white py-5" style={{ background: 'linear-gradient(to right, #0D1A1F, #214551)' }}>
       <Container>
-        <Row>
+        <Row className='justify-content-evenly'>
           <Col md={4}>
             <h5>Awarely</h5>
             <p>
@@ -14,18 +11,9 @@ const Footer = () => {
             </p>
           </Col>
           <Col md={4}>
-            <h5>Quick Links</h5>
-            <Nav className="flex-column">
-              <Nav.Link href="/" className="text-white">Home</Nav.Link>
-              <Nav.Link href="/about" className="text-white">About</Nav.Link>
-              <Nav.Link href="/support" className="text-white">Support</Nav.Link>
-              <Nav.Link href="/login" className="text-white">Login</Nav.Link>
-            </Nav>
-          </Col>
-          <Col md={4}>
             <h5>Contact Us</h5>
-            <p>Email: support@Awarely.com</p>
-            <p>Phone: +123 456 7890</p>
+            <p>Email: redhousedtech@gmail.com</p>
+            <p>Phone: +91 988xxxxxxx</p>
             <div className="d-flex">
               <a href="https://www.facebook.com" className="text-white me-3"><Image size={30} /></a>
               <a href="https://www.twitter.com" className="text-white me-3"><Image size={30} /></a>
@@ -37,7 +25,7 @@ const Footer = () => {
         <hr className="border-top border-secondary my-4" />
         <Row>
           <Col className="text-center">
-            <p className="mb-0">© 2025 Awarely. All rights reserved.</p>
+            <p className="mb-0">© 2024 Awarely. All rights reserved.</p>
           </Col>
         </Row>
       </Container>

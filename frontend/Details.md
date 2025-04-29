@@ -1,3 +1,4 @@
+git config --global core.autocrlf input
 # Work Done List -
 ## Backend
 1. Authentication Backend

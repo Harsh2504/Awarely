@@ -1,3 +1,29 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+body, p, h1, h2, h3, h4, h5, h6, button, input, textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 0.5em 0;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Hide scrollbar for Firefox */
+* {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for WebKit/Blink */
+*::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}

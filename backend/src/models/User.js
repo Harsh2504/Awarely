@@ -15,11 +15,15 @@ const UserSchema = new Schema({
     type: String,
     required: true,
   },
+  finishedSubjects: {
+    type: Array,
+    default: [],
+  },
   timestamp: {
     type: Date,
     default: Date.now,
   },
 });
 
-const User = mongoose.model("user", UserSchema); // Creates a collection named 'user' & stores data in it..
+const User = mongoose.model("user", UserSchema);
 module.exports = User;

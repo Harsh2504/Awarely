@@ -11,7 +11,7 @@ const AuthForm = () => {
     const handleLogin = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:1313/api/auth/login', {
+            const response = await fetch('https://redhouseedtech.onrender.com/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -22,6 +22,10 @@ const AuthForm = () => {
             });
             const data = await response.json();
             console.log('Login response:', data);
+            if (!data.success) {
+                alert('Enter valid login credentials')
+                return null;
+            }
             alert("Login successful.. !");
             localStorage.setItem('token', data.token);
             navigate("/");
@@ -33,7 +37,7 @@ const AuthForm = () => {
     const handleSignup = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:1313/api/auth/register', {
+            const response = await fetch('https://redhouseedtech.onrender.com/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -92,7 +96,7 @@ const AuthForm = () => {
                                         <Form.Label>Password</Form.Label>
                                         <Form.Control
                                             type="password"
-                                            placeholder="Password"
+                                            placeholder="Password ( Should be of atleast 5 characters )"
                                             value={loginFormData.password}
                                             onChange={handleLoginInputChange}
                                             required
@@ -131,7 +135,7 @@ const AuthForm = () => {
                                         <Form.Label>Password</Form.Label>
                                         <Form.Control
                                             type="password"
-                                            placeholder="Password"
+                                            placeholder="Password ( Should be of atleast 5 characters )"
                                             value={signupFormData.password}
                                             onChange={handleSignupInputChange}
                                             required
