@@ -1,39 +1,39 @@
-🧠 Awarely – Awareness Through Interactive Learning
+# 🧠 Awarely – Awareness Through Interactive Learning
 Awarely is a full-stack MERN web application designed to promote social, digital, and personal awareness through engaging quiz-based learning.
 
 The platform features 20+ curated quiz modules on essential real-world topics such as:
 
-Social media safety and digital etiquette
+- Social media safety and digital etiquette
 
-Sex education and consent awareness
+- Sex education and consent awareness
 
-Mental health and emotional well-being
+- Mental health and emotional well-being
 
-Disaster preparedness and response
+- Disaster preparedness and response
 
-Environmental consciousness
+- Environmental consciousness
 
-🎯 Key Features:
+## 🎯 Key Features:
 
-Interactive quizzes with instant feedback
+- Interactive quizzes with instant feedback
 
-Progress tracking and user login via JWT auth
+- Progress tracking and user login via JWT auth
 
-Mobile-responsive UI with a clean and minimal design
+- Mobile-responsive UI with a clean and minimal design
 
-Scalable backend using Node.js + MongoDB
+- Scalable backend using Node.js + MongoDB
 
-🚀 Built With:
+## 🚀 Built With:
 
-React.js (Frontend)
+1. React.js (Frontend)
 
-Node.js & Express.js (Backend)
+2. Node.js & Express.js (Backend)
 
-MongoDB (Database)
+3. MongoDB (Database)4
 
-Tailwind CSS (Styling)
+4. Tailwind CSS (Styling)
 
-JWT (Authentication)
+5. JWT (Authentication)
 
-💡 Objective:
+##💡 Objective:
 To make learning about critical and often-overlooked life topics accessible, engaging, and youth-friendly using a quiz-first approach.
