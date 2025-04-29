@@ -106,15 +106,15 @@ const HeroSection = () => {
             <Container id='heroSection' className="my-5" fluid style={{
                 borderRadius: '10px',
                 overflow: 'hidden',
-                boxShadow: '0 0 10px rgba(0,0,0,0.3)',
+                boxShadow: '',
             }} >
                 <Row className="align-items-center">
                     <Col md={6} className="text-center text-md-left">
-                        <h1 style={{ color: '#0089EA' }} className="display-4">Empower Yourself with Essential Life Skills</h1>
-                        <p style={{ fontSize: '1.25rem' }} className="my-4">
+                        <h1 style={{ color: '#0089EA' }} className="display-4 fustat-heading">Empower Yourself with Essential Life Skills</h1>
+                        <p style={{ fontSize: '1.25rem' }} className="my-4 manrope-paragraph ">
                             Discover a wealth of knowledge on personal safety, sex education, traffic rules, and more. Our interactive quizzes and story-based modules are designed to educate and engage learners of all ages. Start your journey to a safer, smarter, and more informed life today.
                         </p>
-                        <h3 className='my-4' style={{ color: '#0089EA' }}>
+                        <h3 className='my-4 fustat-heading' style={{ color: '#0089EA' }}>
                             <ReactTypingEffect
                                 text={subjects}
                                 speed={100}
@@ -135,7 +135,7 @@ const HeroSection = () => {
                                 }}
                             />
                         </h3>
-                        <button className='getStartedButton' onClick={handleOnClick}>Get Started</button>
+                        <button className='getStartedButton  manrope-paragraph' onClick={handleOnClick}>Get Started</button>
                     </Col>
                     <Col md={6} className="text-center">
                         <img src="https://res.cloudinary.com/dq3uubb5s/image/upload/v1719088900/uhgpxvgykahlh4gvecz6.jpg" alt="Hero" className="img-fluid" />

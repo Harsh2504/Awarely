@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
 const useAuth = () => {
   const navigate = useNavigate();
@@ -8,12 +9,15 @@ const useAuth = () => {
   useEffect(() => {
     const validateToken = async () => {
       const token = localStorage.getItem("token");
+
       if (!token && !hasRedirectedRef.current) {
-        alert("Sorry! You need to login first.");
+        toast.error("⚠️ You need to log in first.");
         hasRedirectedRef.current = true;
         navigate("/login");
         return;
       }
+
+      const toastId = toast.loading("Validating session...");
 
       try {
         const response = await fetch(
@@ -27,17 +31,18 @@ const useAuth = () => {
         );
 
         if (response.status === 401) {
-          // Token is invalid or expired
-          alert("Session expired. Please log in again.");
+          toast.error("Session expired. Please log in again.", { id: toastId });
           localStorage.removeItem("token");
           hasRedirectedRef.current = true;
           navigate("/login");
         } else if (response.status !== 200) {
           throw new Error("Failed to validate token");
+        } else {
+          toast.dismiss(toastId); // Token is valid
         }
       } catch (error) {
         console.error("Token validation error:", error);
-        alert("An error occurred. Please log in again.");
+        toast.error("An error occurred. Please log in again.", { id: toastId });
         localStorage.removeItem("token");
         hasRedirectedRef.current = true;
         navigate("/login");

@@ -114,50 +114,119 @@ const QuizPage = () => {
         <Container
             className="question-page mt-5 my-5"
             style={{
-                borderRadius: '10px',
-                padding: '20px',
-                boxShadow: '0 0 10px rgba(0,0,0,0.3)',
+                borderRadius: '15px',
+                padding: '30px',
+                boxShadow: '',
+                backgroundColor: '#f9f9f9',
             }}
         >
             <Row className="justify-content-center">
-                <Col md={8}>
+                <Col md={10}>
                     <ProgressBar
                         now={(currentQuestionIndex / quiz.questions.length) * 100}
+                        style={{
+                            height: '20px',
+                            borderRadius: '10px',
+                            backgroundColor: '#e0e0e0',
+                        }}
+                        variant="info"
                     />
-                    <p className="text-center mt-2">
+                    <p className="text-center mt-3" style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#555' }}>
                         Question {currentQuestionIndex + 1} of {quiz.questions.length}
                     </p>
-                    <h3 className="mt-4">
+                    <h3
+                        className="mt-4"
+                        style={{
+                            fontSize: '1.8rem',
+                            fontWeight: 'bold',
+                            color: '#333',
+                            textAlign: 'center',
+                        }}
+                    >
                         {currentQuestionIndex + 1}. {currentQuestion.questionText}
                     </h3>
-                    <Form className="mt-4">
+                    <Form className="mt-5">
                         {currentQuestion.answerOptions.map((option, index) => (
-                            <Form.Check
+                            <div
                                 key={index}
-                                type="radio"
-                                name="answer"
-                                label={option}
-                                value={option}
-                                checked={answers[currentQuestionIndex] === option}
-                                onChange={handleAnswer}
-                                style={{ marginBottom: '10px', color: '#000', fontSize: '1.25rem' }} // Increased font size
-                            />
+                                style={{
+                                    marginBottom: '15px',
+                                    padding: '10px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    backgroundColor:
+                                        answers[currentQuestionIndex] === option ? '#d1e7dd' : '#fff',
+                                    boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+                                    transition: 'background-color 0.3s ease',
+                                    cursor: 'pointer',
+                                }} 
+                                className='manrope-paragraph'
+                                onClick={() =>
+                                    setAnswers({
+                                        ...answers,
+                                        [currentQuestionIndex]: option,
+                                    })
+                                }
+                            >
+                                <Form.Check
+                                    type="radio"
+                                    name="answer"
+                                    label={option}
+                                    value={option}
+                                    checked={answers[currentQuestionIndex] === option}
+                                    onChange={handleAnswer}
+                                    style={{
+                                        color: '#333',
+                                        fontSize: '1.2rem',
+                                    }}
+                                />
+                            </div>
                         ))}
                     </Form>
-                    <div className="mt-4 d-flex justify-content-between">
+                    <div className="mt-5 d-flex justify-content-between">
                         <Button
                             onClick={handlePrevious}
                             disabled={currentQuestionIndex === 0}
-                            style={{ backgroundColor: '#0089EA', borderColor: '#0089EA', color: '#FFF' }}
+                            style={{
+                                backgroundColor: '#6c757d', // Neutral gray color
+                                borderColor: '#6c757d',
+                                color: '#fff',
+                                padding: '10px 20px',
+                                fontSize: '1.1rem',
+                                borderRadius: '8px',
+                                boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                            }}
                         >
-                            Previous
+                            <span>&larr;</span> Previous
                         </Button>
                         <Button
                             onClick={handleNext}
-                            disabled={!isAnswerSelected} // Disable the Next button if no answer is selected
-                            style={{ backgroundColor: '#0089EA', borderColor: '#0089EA', color: '#FFF' }}
+                            disabled={!isAnswerSelected}
+                            style={{
+                                backgroundColor: '#17a2b8', // Theme-friendly teal color
+                                borderColor: '#17a2b8',
+                                color: '#fff',
+                                padding: '10px 20px',
+                                fontSize: '1.1rem',
+                                borderRadius: '8px',
+                                boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                            }}
                         >
-                            {currentQuestionIndex < quiz.questions.length - 1 ? 'Next' : 'Submit'}
+                            {currentQuestionIndex < quiz.questions.length - 1 ? (
+                                <>
+                                    Next <span>&rarr;</span>
+                                </>
+                            ) : (
+                                <>
+                                    Submit <span>&rarr;</span>
+                                </>
+                            )}
                         </Button>
                     </div>
                 </Col>
