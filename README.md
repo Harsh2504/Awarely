@@ -1,8 +1,39 @@
-# React + Vite
+🧠 Awarely – Awareness Through Interactive Learning
+Awarely is a full-stack MERN web application designed to promote social, digital, and personal awareness through engaging quiz-based learning.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The platform features 20+ curated quiz modules on essential real-world topics such as:
 
-Currently, two official plugins are available:
+Social media safety and digital etiquette
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Sex education and consent awareness
+
+Mental health and emotional well-being
+
+Disaster preparedness and response
+
+Environmental consciousness
+
+🎯 Key Features:
+
+Interactive quizzes with instant feedback
+
+Progress tracking and user login via JWT auth
+
+Mobile-responsive UI with a clean and minimal design
+
+Scalable backend using Node.js + MongoDB
+
+🚀 Built With:
+
+React.js (Frontend)
+
+Node.js & Express.js (Backend)
+
+MongoDB (Database)
+
+Tailwind CSS (Styling)
+
+JWT (Authentication)
+
+💡 Objective:
+To make learning about critical and often-overlooked life topics accessible, engaging, and youth-friendly using a quiz-first approach.
