@@ -128,7 +128,7 @@ const loginUser = async (req, res) => {
     });
 
     success = true;
-    return res.status(200).json({ token, success });
+    return res.status(200).json({ token, name: user.name, success });
   } catch (error) {
     console.error("Error during user login:", error); // Log the error for debugging purposes
     return res.status(500).json({ message: "Server error", success });
