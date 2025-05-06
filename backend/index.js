@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000; // Set a default port if not defined in .
 connectToMongo();
 
 // CORS configuration
-const allowedOrigins = ['http://localhost:5173', 'https://redhouse-edtech.netlify.app'];
+const allowedOrigins = ['http://localhost:5173', 'https://redhouse-edtech.netlify.app','https://awarely-kappa.vercel.app/'];
 
 app.use(cors({
   origin: function (origin, callback) {
