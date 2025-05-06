@@ -84,12 +84,12 @@ function NavbarComponent({ setSearchQuery }) {
                 className="mx-2"
                 to="/"
                 style={{
-                  color: location.pathname === '/' ? '#45A29E' : '#66FCF1',
+                  color: location.pathname === '/' ? '#ffffff' : '#66FCF1',
                   transition: 'color 0.3s',
                 }}
                 onMouseEnter={(e) => (e.target.style.color = '#45A29E')}
                 onMouseLeave={(e) =>
-                  (e.target.style.color = location.pathname === '/' ? '#45A29E' : '#66FCF1')
+                  (e.target.style.color = location.pathname === '/' ? '#ffffff' : '#66FCF1')
                 }
               >
                 Home
