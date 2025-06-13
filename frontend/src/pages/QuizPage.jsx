@@ -54,7 +54,7 @@ const QuizPage = () => {
                     throw new Error('No token found');
                 }
     
-                const getUserResponse = await fetch('https://redhouseedtech.onrender.com/api/auth/fetchUser', {
+                const getUserResponse = await fetch('http://localhost:1313/api/auth/fetchUser', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ const QuizPage = () => {
     
                 const userData = await getUserResponse.json();
 
-                const updateSubjectResponse = await fetch('https://redhouseedtech.onrender.com/api/auth/updateFinishedSubjects', {
+                const updateSubjectResponse = await fetch('http://localhost:1313/api/auth/updateFinishedSubjects', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

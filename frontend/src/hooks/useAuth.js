@@ -21,7 +21,7 @@ const useAuth = () => {
 
       try {
         const response = await fetch(
-          "https://redhouseedtech.onrender.com/api/auth/validate-token",
+          "http://localhost:1313/api/auth/validate-token",
           {
             method: "GET",
             headers: {

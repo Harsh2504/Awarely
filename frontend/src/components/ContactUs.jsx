@@ -21,7 +21,7 @@ const ContactUs = () => {
 const postData = async (formData) => {
     const toastId = toast.loading('Sending email... Please wait!');
     try {
-        const response = await fetch('https://redhouseedtech.onrender.com/api/contactUs/contact', {
+        const response = await fetch('http://localhost:1313/api/contactUs/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
